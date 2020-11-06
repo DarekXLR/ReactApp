@@ -1,13 +1,20 @@
 import React from 'react';
-import Header from './components/Header/Header'
+import { HashRouter as Router } from 'react-router-dom';
+import Header from './components/Header/Header';
+
 import StoreProvider from './store/StoreProvider';
 require("regenerator-runtime/runtime");
-
+import AsideMenu from './components/AsideMenu/AsideMenu';
 import './App.scss';
 
 const App = () => (
   <StoreProvider>
     <Header />
+    <Router>
+      <div className="content-wrapper">
+        <AsideMenu />
+      </div>
+    </Router>
   </StoreProvider>
 
 );
