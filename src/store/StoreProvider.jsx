@@ -1,7 +1,7 @@
 import React, { useEffect, useState, createContext } from 'react';
 import request from '../helpers/request';
 
-export const StoreContext = createContext(null);
+export const StoreContext = createContext([]);
 
 const StoreProvider = ({ children }) => {
   const [courses, setCourses] = useState(null);

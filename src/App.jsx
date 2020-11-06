@@ -6,6 +6,7 @@ import StoreProvider from './store/StoreProvider';
 require("regenerator-runtime/runtime");
 import AsideMenu from './components/AsideMenu/AsideMenu';
 import './App.scss';
+import Content from './components/Content/Content';
 
 const App = () => (
   <StoreProvider>
@@ -13,6 +14,7 @@ const App = () => (
     <Router>
       <div className="content-wrapper">
         <AsideMenu />
+        <Content />
       </div>
     </Router>
   </StoreProvider>
