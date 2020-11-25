@@ -1,9 +1,12 @@
 {
+  "homepage": "https://darekxlr.github.io/ReactApp/",
   "name": "frontend",
   "version": "1.0.0",
   "description": "Another React APP",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   },
@@ -12,6 +15,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "bem-css-modules": "^1.4.2",
+    "gh-pages": "^3.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
