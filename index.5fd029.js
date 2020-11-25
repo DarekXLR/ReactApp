@@ -5780,11 +5780,13 @@ var Perfume_Perfume = function Perfume(_ref) {
     className: Perfume_style('title')
   }, title), /*#__PURE__*/react_default.a.createElement("div", {
     className: Perfume_style('image-wrapper')
-  }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: "../../images/".concat(img),
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    style: {
+      backgroundImage: "url(../../images/".concat(img, ")")
+    },
     alt: title,
     className: Perfume_style('image')
-  }), soldOut), /*#__PURE__*/react_default.a.createElement("p", {
+  }, soldOut)), /*#__PURE__*/react_default.a.createElement("p", {
     className: Perfume_style('price')
   }, "Cena: ".concat(price, "z\u0142"), " "), stockOrBouhtItems, shouldDisplayBeVisible && /*#__PURE__*/react_default.a.createElement("div", {
     className: Perfume_style('price-wrapper')
