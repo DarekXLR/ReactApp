@@ -45,8 +45,6 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|svg|gif|jpeg)$/,
-        // zmienilem z loader: na use:
-        // loader: [
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

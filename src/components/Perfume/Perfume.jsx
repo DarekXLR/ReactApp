@@ -113,8 +113,9 @@ const Perfume = ({ id, isUserContext = false, img, price, title, stock }) => {
       <article className={style()}>
         <h3 className={style('title')} >{title}</h3>
         <div className={style('image-wrapper')}>
-          <img src={img} alt={title} className={style('image')} />
-          {soldOut}
+          <div style={{ backgroundImage: `url(${img})` }} alt={title} className={style('image')}>
+            {soldOut}
+          </div>
         </div>
         <p className={style('price')}>{`Cena: ${price}zł`} </p>
         {stockOrBouhtItems}
