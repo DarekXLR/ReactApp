@@ -5128,37 +5128,37 @@ var _require = __webpack_require__(10),
 
 var productsData = [{
   id: uuid(),
-  img: './images/perfumeNR1.jpg',
+  img: 'perfumeNR1.jpg',
   price: 349.99,
   title: 'Słodki fiolet',
   stock: 6
 }, {
   id: uuid(),
-  img: './images/perfumeNR2.jpg',
+  img: 'perfumeNR2.jpg',
   price: 180.59,
   title: 'Niebiańskie jabłko',
   stock: 2
 }, {
   id: uuid(),
-  img: './images/perfumeNR3.jpg',
+  img: 'perfumeNR3.jpg',
   price: 89.99,
   title: 'Subtelna róż',
   stock: 4
 }, {
   id: uuid(),
-  img: './images/perfumeNR4.jpg',
+  img: 'perfumeNR4.jpg',
   price: 39.99,
   title: 'Romans',
   stock: 0
 }, {
   id: uuid(),
-  img: './images/perfumeNR5.jpg',
+  img: 'perfumeNR5.jpg',
   price: 189.99,
   title: 'Wesołe trio',
   stock: 3
 }, {
   id: uuid(),
-  img: './images/perfumeNR6.jpg',
+  img: 'perfumeNR6.jpg',
   price: 89.99,
   title: 'Niewiadomo co',
   stock: 5
@@ -5781,7 +5781,7 @@ var Perfume_Perfume = function Perfume(_ref) {
   }, title), /*#__PURE__*/react_default.a.createElement("div", {
     className: Perfume_style('image-wrapper')
   }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: img,
+    src: "../../images/".concat(img),
     alt: title,
     className: Perfume_style('image')
   }), soldOut), /*#__PURE__*/react_default.a.createElement("p", {
