@@ -18,7 +18,6 @@ const Header = () => {
   const handleonClick = () => {
     if (Boolean(user)) {
       setUser(null)
-      moneyLeftDisplay = null
     } else {
       setIsModalOpen(true);
     }
@@ -40,7 +39,7 @@ const Header = () => {
         <div>
           <h3>For login as User:</h3>
           <span> Login: user </span><br />
-          <span> Password: 123456 </span>
+          <span> Password: 123 </span>
 
           <h3> For login as Admin:</h3>
           <span> Login: admin</span><br />

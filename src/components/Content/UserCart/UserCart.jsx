@@ -18,7 +18,7 @@ const UserCart = () => {
   const boughtSupplies = products
     .filter(product => user.products.some(({ productNr }) => product.id === productNr))
     .map(product => <Perfume isUserContext={true} key={product.id} {...product} />)
-  const payOrBuy = user.products.length ? 'Zapłac' : 'Katalog';
+  const payOrBuy = user.products.length ? 'Zapłać' : 'Katalog';
 
   const handleOnClick = () => {
     setUser(prev => {

@@ -17,6 +17,7 @@
   }
 
   &__buy-button {
+    cursor: pointer;
     position: fixed;
     right: 50px;
     bottom: 100px;
@@ -24,5 +25,9 @@
     font-weight: bold;
     background-color: rgb(201, 255, 185);
 
+  }
+
+  &__buy-button:hover {
+    background-color: rgb(136, 240, 52);
   }
 }

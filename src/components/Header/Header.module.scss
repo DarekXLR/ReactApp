@@ -34,6 +34,7 @@
   &__login-button {
     padding: 0 20px;
     font-size: 18px;
+    cursor: pointer;
   }
 
   &__information {
@@ -44,6 +45,10 @@
     left: 50%;
     transform: translateX(-50%);
     animation: attention 1.5s linear 2;
+
+    i {
+      cursor: help;
+    }
 
     div {
       color: black;
@@ -68,7 +73,6 @@
   &__information:hover div {
     display: block;
   }
-
 }
 
 @keyframes attention {
@@ -86,4 +90,5 @@
     font-size: 50px;
     color: rgb(173, 164, 164);
   }
+
 }
