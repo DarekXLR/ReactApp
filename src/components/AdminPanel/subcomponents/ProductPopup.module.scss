@@ -8,11 +8,13 @@
   }
 
   &__form-row {
+    margin: 5px 0;
     display: flex;
   }
 
   &__input {
     display: flex;
+    margin: 5px 0;
     flex-grow: 1;
   }
 }

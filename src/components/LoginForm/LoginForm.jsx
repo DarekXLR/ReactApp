@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../store/StoreProvider';
 import bemCssModules from 'bem-css-modules';
-import request from '../../helpers/request';
 
 import Modal from '../Modal/Modal';
 import { default as LoginFormStyle } from './LoginForm.module.scss';
+import { verifyUser } from '../../store/data/users';
 
 const style = bemCssModules(LoginFormStyle);
 
@@ -31,14 +31,15 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
 
   const handleOnSubmit = async event => {
     event.preventDefault();
-    const { data, status } = await request.post('/users', { login, password });
-    if (status === 200) {
-      setUser(data.user);
+
+    const loginConfirmation = verifyUser(login, password);
+    if (loginConfirmation) {
+      setUser(loginConfirmation);
       resetStateOfInputs();
       handleOnClose();
     } else {
-      setValidateMessage(data.message);
-    };
+      setValidateMessage('Błędne dane');
+    }
   };
 
   useEffect(() => {
@@ -68,8 +69,8 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
           </label>
         </div>
         <div className={style('row')}>
-          <button type="submit">Zaloguj</button>
-          <button onClick={handleOnCloseModal} type="button">Anuluj</button>
+          <button className={style('button')} type="submit">Zaloguj</button>
+          <button className={style('button')} onClick={handleOnCloseModal} type="button">Anuluj</button>
         </div>
       </form>
     </Modal>

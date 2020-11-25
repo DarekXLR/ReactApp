@@ -13,10 +13,10 @@ const UserMenu = ({ isUserLogged }) => {
         <ul>
           <li className={style('link')}>
             <Link to="/">
-              Kursy w sprzedaży
+              Produkty w sprzedaży
           </Link>
           </li>
-          {isUserLogged && <li className={style('link')}><Link to="/my-courses">Moje zakupione kursy</Link></li>}
+          {isUserLogged && <li className={style('link')}><Link to="/my-shopcart">Lista kupionych towarów</Link></li>}
         </ul>
       </nav>
     </>

@@ -5,20 +5,85 @@
   right: 0;
   display: flex;
   height: 60px;
-  background-color: #ddd;
+  background-color: rgb(255, 211, 141);
   border-bottom: 2px solid black;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
 
   &__logo-wrapper {
-    width: 60px;
-    height: 60px;
-    background-color: #438756;
+    background-image: url('../../images/Logo.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 100%;
   }
 
   &__title {
     margin-left: 20px;
     align-self: center;
     flex-grow: 1;
+  }
+
+  &__budget {
+    display: block;
+    margin-right: 50px;
+    font-size: 24px;
+    align-self: center;
+
+  }
+
+  &__login-button {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+
+  &__information {
+    font-size: 50px;
+    position: absolute;
+    color: rgb(173, 164, 164);
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: attention 1.5s linear 2;
+
+    div {
+      color: black;
+      background-color: rgb(241, 241, 241);
+      font-size: 18px;
+      display: none;
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      // height: 200px;
+      width: 400px;
+      padding: 15px;
+      border: 2px solid black;
+
+      span {
+        margin: 5px;
+      }
+    }
+  }
+
+  &__information:hover div {
+    display: block;
+  }
+
+}
+
+@keyframes attention {
+  0% {
+    font-size: 50px;
+    color: rgb(173, 164, 164);
+  }
+
+  50% {
+    font-size: 100px;
+    color: black;
+  }
+
+  100% {
+    font-size: 50px;
+    color: rgb(173, 164, 164);
   }
 }

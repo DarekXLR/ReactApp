@@ -1,28 +1,22 @@
-import React, { useEffect, useState, createContext } from 'react';
-import request from '../helpers/request';
+import React, { useState, createContext } from 'react';
+import productsData from './data/products';
 
 export const StoreContext = createContext([]);
 
 const StoreProvider = ({ children }) => {
-  const [courses, setCourses] = useState(null);
+  const [products, setProducts] = useState([...productsData]);
   const [user, setUser] = useState(null);
-
-  const fetchData = async () => {
-    const { data } = await request.get('/courses');
-    setCourses(data.courses);
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [moneyLeft, setMoneyLeft] = useState(0);
 
   return (
 
     <StoreContext.Provider value={{
-      courses,
-      setCourses,
+      products,
+      setProducts,
       user,
-      setUser
+      setUser,
+      moneyLeft,
+      setMoneyLeft,
     }}>
       {children}
     </StoreContext.Provider>

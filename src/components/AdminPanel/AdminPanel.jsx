@@ -1,23 +1,23 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../store/StoreProvider';
-import CourseDetails from './subcomponents/CourseDetails';
-import CoursePopup from './subcomponents/CoursePopup';
+import ProductDetails from './subcomponents/ProductDetails';
+import ProductPopup from './subcomponents/ProductPopup';
 
 const AdminPanel = () => {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
-  const { courses } = useContext(StoreContext);
+  const { products } = useContext(StoreContext);
   const showPopup = () => setIsOpenPopup(true);
   const hidePopup = () => {
     setIsOpenPopup(false);
   };
 
-  const coursesElements = courses.map(course => <CourseDetails key={course.id} {...course} />);
+  const productsElements = products.map(product => <ProductDetails key={product.id} {...product} />);
 
   return (
     <section>
-      {coursesElements}
-      <button onClick={showPopup}>Dodaj nowy kurs</button>
-      <CoursePopup isEditMode={false} isOpenPopup={isOpenPopup} hidePopup={hidePopup} />
+      {productsElements}
+      <button onClick={showPopup}>Dodaj nowy produkt</button>
+      <ProductPopup isEditMode={false} isOpenPopup={isOpenPopup} hidePopup={hidePopup} />
     </section>
   );
 };
