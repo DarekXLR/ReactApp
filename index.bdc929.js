@@ -5515,7 +5515,6 @@ var Header_Header = function Header() {
   var handleonClick = function handleonClick() {
     if (Boolean(user)) {
       setUser(null);
-      moneyLeftDisplay = null;
     } else {
       setIsModalOpen(true);
     }
@@ -5537,7 +5536,7 @@ var Header_Header = function Header() {
     className: Header_style('information')
   }, /*#__PURE__*/react_default.a.createElement("i", {
     className: "fas fa-info-circle"
-  }), /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement("h3", null, "For login as User:"), /*#__PURE__*/react_default.a.createElement("span", null, " Login: user "), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("span", null, " Password: 123456 "), /*#__PURE__*/react_default.a.createElement("h3", null, " For login as Admin:"), /*#__PURE__*/react_default.a.createElement("span", null, " Login: admin"), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("span", null, "  Password: 123"))), user && /*#__PURE__*/react_default.a.createElement("p", {
+  }), /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement("h3", null, "For login as User:"), /*#__PURE__*/react_default.a.createElement("span", null, " Login: user "), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("span", null, " Password: 123 "), /*#__PURE__*/react_default.a.createElement("h3", null, " For login as Admin:"), /*#__PURE__*/react_default.a.createElement("span", null, " Login: admin"), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("span", null, "  Password: 123"))), user && /*#__PURE__*/react_default.a.createElement("p", {
     className: Header_style('budget')
   }, "Tw\xF3j bud\u017Cet wynosi: ", moneyLeft === null || moneyLeft === void 0 ? void 0 : moneyLeft.toFixed(2), " z\u0142"), /*#__PURE__*/react_default.a.createElement("button", {
     className: Header_style('login-button'),
@@ -5853,7 +5852,7 @@ var UserCart_UserCart = function UserCart() {
       key: product.id
     }, product));
   });
-  var payOrBuy = user.products.length ? 'Zapłac' : 'Katalog';
+  var payOrBuy = user.products.length ? 'Zapłać' : 'Katalog';
 
   var handleOnClick = function handleOnClick() {
     setUser(function (prev) {
