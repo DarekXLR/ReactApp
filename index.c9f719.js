@@ -5122,43 +5122,62 @@ if (false) { var ariaCurrentType; }
 var bem_css_modules = __webpack_require__(1);
 var bem_css_modules_default = /*#__PURE__*/__webpack_require__.n(bem_css_modules);
 
+// CONCATENATED MODULE: ./src/images/perfumeNR1.jpg
+/* harmony default export */ var perfumeNR1 = (__webpack_require__.p + "images/perfumeNR1.jpg");
+// CONCATENATED MODULE: ./src/images/perfumeNR2.jpg
+/* harmony default export */ var perfumeNR2 = (__webpack_require__.p + "images/perfumeNR2.jpg");
+// CONCATENATED MODULE: ./src/images/perfumeNR3.jpg
+/* harmony default export */ var perfumeNR3 = (__webpack_require__.p + "images/perfumeNR3.jpg");
+// CONCATENATED MODULE: ./src/images/perfumeNR4.jpg
+/* harmony default export */ var perfumeNR4 = (__webpack_require__.p + "images/perfumeNR4.jpg");
+// CONCATENATED MODULE: ./src/images/perfumeNR5.jpg
+/* harmony default export */ var perfumeNR5 = (__webpack_require__.p + "images/perfumeNR5.jpg");
+// CONCATENATED MODULE: ./src/images/perfumeNR6.jpg
+/* harmony default export */ var perfumeNR6 = (__webpack_require__.p + "images/perfumeNR6.jpg");
 // CONCATENATED MODULE: ./src/store/data/products.js
+
+
+
+
+
+
+
 var _require = __webpack_require__(10),
     uuid = _require.v4;
 
 var productsData = [{
   id: uuid(),
-  img: 'perfumeNR1.jpg',
+  img: perfumeNR1,
   price: 349.99,
   title: 'Słodki fiolet',
   stock: 6
 }, {
   id: uuid(),
-  img: 'perfumeNR2.jpg',
+  img: perfumeNR2,
   price: 180.59,
   title: 'Niebiańskie jabłko',
   stock: 2
 }, {
   id: uuid(),
-  img: 'perfumeNR3.jpg',
+  img: perfumeNR3,
   price: 89.99,
   title: 'Subtelna róż',
   stock: 4
 }, {
   id: uuid(),
-  img: 'perfumeNR4.jpg',
+  img: perfumeNR4,
   price: 39.99,
   title: 'Romans',
   stock: 0
 }, {
   id: uuid(),
-  img: 'perfumeNR5.jpg',
+  img: perfumeNR5,
   price: 189.99,
   title: 'Wesołe trio',
   stock: 3
 }, {
   id: uuid(),
-  img: 'perfumeNR6.jpg',
+  img: perfumeNR6,
   price: 89.99,
   title: 'Niewiadomo co',
   stock: 5
@@ -5782,7 +5801,7 @@ var Perfume_Perfume = function Perfume(_ref) {
     className: Perfume_style('image-wrapper')
   }, /*#__PURE__*/react_default.a.createElement("div", {
     style: {
-      backgroundImage: "url(../../images/".concat(img, ")")
+      backgroundImage: "url(".concat(img, ")")
     },
     alt: title,
     className: Perfume_style('image')
